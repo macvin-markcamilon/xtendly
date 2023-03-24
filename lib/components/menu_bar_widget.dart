@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'menu_bar_model.dart';
@@ -294,6 +295,11 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
                         print('IconButton pressed ...');
                       },
                     ),
+                    FaIcon(
+                      FontAwesomeIcons.moon,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      size: 24.0,
+                    ),
                     Switch(
                       value: _model.switchValue ??= true,
                       onChanged: (newValue) async {
@@ -304,6 +310,12 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
                           setDarkModeSetting(context, ThemeMode.dark);
                         }
                       },
+                      activeColor: FlutterFlowTheme.of(context).primaryColor,
+                    ),
+                    Icon(
+                      Icons.wb_sunny_outlined,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      size: 24.0,
                     ),
                   ],
                 ),
