@@ -1,10 +1,10 @@
 import '/components/category_card_widget.dart';
 import '/components/collection_widget.dart';
 import '/components/footer_information_widget.dart';
+import '/components/menu_bar_mobile_widget.dart';
 import '/components/menu_bar_widget.dart';
 import '/components/sale_bar_widget.dart';
 import '/components/sale_card_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -151,62 +151,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           ),
         ),
       ),
-      appBar: responsiveVisibility(
-        context: context,
-        tablet: false,
-        tabletLandscape: false,
-        desktop: false,
-      )
-          ? AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-              iconTheme: IconThemeData(
-                  color: FlutterFlowTheme.of(context).primaryText),
-              automaticallyImplyLeading: true,
-              title: Image.asset(
-                'assets/images/Logo_Etc._(17).png',
-                width: 100.0,
-                height: 50.0,
-                fit: BoxFit.contain,
-              ),
-              actions: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 30.0,
-                      borderWidth: 1.0,
-                      buttonSize: 60.0,
-                      icon: Icon(
-                        Icons.shopping_cart_outlined,
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                    FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 30.0,
-                      borderWidth: 1.0,
-                      buttonSize: 60.0,
-                      icon: Icon(
-                        Icons.star_border,
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                  ],
-                ),
-              ],
-              centerTitle: true,
-              elevation: 4.0,
-            )
-          : null,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -232,6 +176,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       if (responsiveVisibility(
                         context: context,
                         phone: false,
+                        tablet: false,
+                        tabletLandscape: false,
                       ))
                         Expanded(
                           child: wrapWithModel(
@@ -240,6 +186,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             child: MenuBarWidget(
                               logo:
                                   'https://i.pinimg.com/originals/c1/92/9d/c1929d3492c2f64ab65b43808c072043.jpg',
+                            ),
+                          ),
+                        ),
+                      if (responsiveVisibility(
+                        context: context,
+                        desktop: false,
+                      ))
+                        Align(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: InkWell(
+                            onTap: () async {
+                              scaffoldKey.currentState!.openDrawer();
+                            },
+                            child: wrapWithModel(
+                              model: _model.menuBarMobileModel,
+                              updateCallback: () => setState(() {}),
+                              child: MenuBarMobileWidget(
+                                image:
+                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/s2zzujt6oyp7/Logo_Etc._(17).png',
+                              ),
                             ),
                           ),
                         ),
@@ -419,38 +385,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           context: context,
                           phone: false,
                         ))
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              wrapWithModel(
-                                model: _model.categoryCardModel1,
-                                updateCallback: () => setState(() {}),
-                                child: CategoryCardWidget(
-                                  image:
-                                      'https://cdn.media.amplience.net/i/rb/WCC22HT025FR26-020-A/Vintage-Terry-Sweatshirt-020?\$medium\$&fmt=auto',
-                                  categoryName: 'Sweatshirts',
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                wrapWithModel(
+                                  model: _model.categoryCardModel1,
+                                  updateCallback: () => setState(() {}),
+                                  child: CategoryCardWidget(
+                                    image:
+                                        'https://cdn.media.amplience.net/i/rb/WCC22HT025FR26-020-A/Vintage-Terry-Sweatshirt-020?\$medium\$&fmt=auto',
+                                    categoryName: 'Sweatshirts',
+                                  ),
                                 ),
-                              ),
-                              wrapWithModel(
-                                model: _model.categoryCardModel2,
-                                updateCallback: () => setState(() {}),
-                                child: CategoryCardWidget(
-                                  image:
-                                      'https://cdn.shopify.com/s/files/1/0618/1040/9717/files/PLP_Mob_HoodiesSweaters_M_570c8e1e-a2bb-46b3-be7d-7240a18e7515_1200x.jpg?v=1676479181',
-                                  categoryName: 'Hoodies',
+                                wrapWithModel(
+                                  model: _model.categoryCardModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: CategoryCardWidget(
+                                    image:
+                                        'https://cdn.shopify.com/s/files/1/0618/1040/9717/files/PLP_Mob_HoodiesSweaters_M_570c8e1e-a2bb-46b3-be7d-7240a18e7515_1200x.jpg?v=1676479181',
+                                    categoryName: 'Hoodies',
+                                  ),
                                 ),
-                              ),
-                              wrapWithModel(
-                                model: _model.categoryCardModel3,
-                                updateCallback: () => setState(() {}),
-                                child: CategoryCardWidget(
-                                  image:
-                                      'https://ph-test-11.slatic.net/p/7de69275a49b972f301574a2cd2dc3cb.jpg',
-                                  categoryName: 'Pair',
+                                wrapWithModel(
+                                  model: _model.categoryCardModel3,
+                                  updateCallback: () => setState(() {}),
+                                  child: CategoryCardWidget(
+                                    image:
+                                        'https://ph-test-11.slatic.net/p/7de69275a49b972f301574a2cd2dc3cb.jpg',
+                                    categoryName: 'Pair',
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         if (responsiveVisibility(
                           context: context,
@@ -523,55 +492,58 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               32.0, 32.0, 32.0, 32.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              wrapWithModel(
-                                model: _model.saleCardModel1,
-                                updateCallback: () => setState(() {}),
-                                child: SaleCardWidget(
-                                  image:
-                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/lktfddp2tbyz/tshirt1.jpg',
-                                  name: 'I Love Her',
-                                  percentOff: '15% OFF',
-                                  price: 1500.0,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                wrapWithModel(
+                                  model: _model.saleCardModel1,
+                                  updateCallback: () => setState(() {}),
+                                  child: SaleCardWidget(
+                                    image:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/lktfddp2tbyz/tshirt1.jpg',
+                                    name: 'I Love Her',
+                                    percentOff: '15% OFF',
+                                    price: 1500.0,
+                                  ),
                                 ),
-                              ),
-                              wrapWithModel(
-                                model: _model.saleCardModel2,
-                                updateCallback: () => setState(() {}),
-                                child: SaleCardWidget(
-                                  image:
-                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/k00pw6empbh8/tshirt2.png',
-                                  price: 2500.0,
-                                  name: 'Hoodie',
-                                  percentOff: '10% OFF',
+                                wrapWithModel(
+                                  model: _model.saleCardModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: SaleCardWidget(
+                                    image:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/k00pw6empbh8/tshirt2.png',
+                                    price: 2500.0,
+                                    name: 'Hoodie',
+                                    percentOff: '10% OFF',
+                                  ),
                                 ),
-                              ),
-                              wrapWithModel(
-                                model: _model.saleCardModel3,
-                                updateCallback: () => setState(() {}),
-                                child: SaleCardWidget(
-                                  image:
-                                      'https://images.squarespace-cdn.com/content/v1/51c322cfe4b032aad705a0fc/1642096058730-OUF4I23B7LTCE10UM7QX/G185B_Charcoal_FF.png?format=1000w',
-                                  price: 2500.0,
-                                  name: 'Hoodie',
-                                  percentOff: '10% OFF',
+                                wrapWithModel(
+                                  model: _model.saleCardModel3,
+                                  updateCallback: () => setState(() {}),
+                                  child: SaleCardWidget(
+                                    image:
+                                        'https://images.squarespace-cdn.com/content/v1/51c322cfe4b032aad705a0fc/1642096058730-OUF4I23B7LTCE10UM7QX/G185B_Charcoal_FF.png?format=1000w',
+                                    price: 2500.0,
+                                    name: 'Hoodie',
+                                    percentOff: '10% OFF',
+                                  ),
                                 ),
-                              ),
-                              wrapWithModel(
-                                model: _model.saleCardModel4,
-                                updateCallback: () => setState(() {}),
-                                child: SaleCardWidget(
-                                  image:
-                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/w89hd4csf79i/Towel_13.png',
-                                  price: 300.0,
-                                  name: 'Nike Hoodie',
-                                  percentOff: '10% OFF',
+                                wrapWithModel(
+                                  model: _model.saleCardModel4,
+                                  updateCallback: () => setState(() {}),
+                                  child: SaleCardWidget(
+                                    image:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/w89hd4csf79i/Towel_13.png',
+                                    price: 300.0,
+                                    name: 'Nike Hoodie',
+                                    percentOff: '10% OFF',
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       if (responsiveVisibility(

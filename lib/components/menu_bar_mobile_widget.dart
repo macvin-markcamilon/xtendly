@@ -63,19 +63,13 @@ class _MenuBarMobileWidgetState extends State<MenuBarMobileWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              FlutterFlowIconButton(
-                borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
-                icon: Icon(
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                child: Icon(
                   Icons.menu,
                   color: FlutterFlowTheme.of(context).primaryText,
                   size: 30.0,
                 ),
-                onPressed: () async {
-                  Navigator.pop(context);
-                },
               ),
               Image.asset(
                 'assets/images/Logo_Etc._(17).png',

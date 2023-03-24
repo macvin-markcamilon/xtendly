@@ -1,10 +1,10 @@
 import '/components/category_card_widget.dart';
 import '/components/collection_widget.dart';
 import '/components/footer_information_widget.dart';
+import '/components/menu_bar_mobile_widget.dart';
 import '/components/menu_bar_widget.dart';
 import '/components/sale_bar_widget.dart';
 import '/components/sale_card_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -17,6 +17,8 @@ class HomePageModel extends FlutterFlowModel {
 
   // Model for MenuBar component.
   late MenuBarModel menuBarModel;
+  // Model for MenuBarMobile component.
+  late MenuBarMobileModel menuBarMobileModel;
   // Model for CategoryCard component.
   late CategoryCardModel categoryCardModel1;
   // Model for CategoryCard component.
@@ -60,6 +62,7 @@ class HomePageModel extends FlutterFlowModel {
 
   void initState(BuildContext context) {
     menuBarModel = createModel(context, () => MenuBarModel());
+    menuBarMobileModel = createModel(context, () => MenuBarMobileModel());
     categoryCardModel1 = createModel(context, () => CategoryCardModel());
     categoryCardModel2 = createModel(context, () => CategoryCardModel());
     categoryCardModel3 = createModel(context, () => CategoryCardModel());
@@ -84,6 +87,7 @@ class HomePageModel extends FlutterFlowModel {
 
   void dispose() {
     menuBarModel.dispose();
+    menuBarMobileModel.dispose();
     categoryCardModel1.dispose();
     categoryCardModel2.dispose();
     categoryCardModel3.dispose();
