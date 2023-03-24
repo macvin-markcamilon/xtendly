@@ -11,6 +11,8 @@ class MenuBarModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for Switch widget.
+  bool? switchValue;
 
   /// Initialization and disposal methods.
 

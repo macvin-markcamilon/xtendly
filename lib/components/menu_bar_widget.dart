@@ -109,11 +109,11 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.network(
-                  widget.logo!,
+                Image.asset(
+                  'assets/images/Logo_Etc._(17).png',
                   width: 100.0,
                   height: 100.0,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -272,7 +272,7 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
                       borderWidth: 1.0,
                       buttonSize: 50.0,
                       icon: Icon(
-                        Icons.shopping_cart,
+                        Icons.shopping_cart_outlined,
                         color: FlutterFlowTheme.of(context).primaryText,
                         size: 30.0,
                       ),
@@ -292,6 +292,17 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
                       ),
                       onPressed: () {
                         print('IconButton pressed ...');
+                      },
+                    ),
+                    Switch(
+                      value: _model.switchValue ??= true,
+                      onChanged: (newValue) async {
+                        setState(() => _model.switchValue = newValue!);
+                        if (newValue!) {
+                          setDarkModeSetting(context, ThemeMode.light);
+                        } else {
+                          setDarkModeSetting(context, ThemeMode.dark);
+                        }
                       },
                     ),
                   ],

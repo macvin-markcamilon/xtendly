@@ -48,150 +48,165 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       backgroundColor: Color(0xFFBCBBBB),
       drawer: Drawer(
         elevation: 16.0,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
-                  child: Image.asset(
-                    'assets/images/Logo_Etc._(17).png',
-                    width: 100.0,
-                    height: 100.0,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ],
-            ),
-            ListTile(
-              title: Text(
-                'Home',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-            ListTile(
-              title: Text(
-                'New Arrival',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-            ListTile(
-              title: Text(
-                'Shop',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-            ListTile(
-              title: Text(
-                'Last Collection',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-            ListTile(
-              title: Text(
-                'Men',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-            ListTile(
-              title: Text(
-                'Women',
-                style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Poppins',
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              tileColor: Color(0xFFF5F5F5),
-              dense: false,
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme:
-            IconThemeData(color: FlutterFlowTheme.of(context).primaryText),
-        automaticallyImplyLeading: true,
-        title: Image.asset(
-          'assets/images/Logo_Etc._(17).png',
+        child: Container(
           width: 100.0,
-          height: 50.0,
-          fit: BoxFit.contain,
-        ),
-        actions: [
-          Row(
+          height: 100.0,
+          decoration: BoxDecoration(
+            color: FlutterFlowTheme.of(context).secondaryBackground,
+          ),
+          child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FlutterFlowIconButton(
-                borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 30.0,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                    child: Image.asset(
+                      'assets/images/Logo_Etc._(17).png',
+                      width: 100.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
               ),
-              FlutterFlowIconButton(
-                borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
-                icon: Icon(
-                  Icons.star_border,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 30.0,
+              ListTile(
+                title: Text(
+                  'Home',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
+                tileColor: FlutterFlowTheme.of(context).primaryBackground,
+                dense: false,
+              ),
+              ListTile(
+                title: Text(
+                  'New Arrival',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                tileColor: Color(0xFFF5F5F5),
+                dense: false,
+              ),
+              ListTile(
+                title: Text(
+                  'Shop',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                tileColor: Color(0xFFF5F5F5),
+                dense: false,
+              ),
+              ListTile(
+                title: Text(
+                  'Last Collection',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                tileColor: Color(0xFFF5F5F5),
+                dense: false,
+              ),
+              ListTile(
+                title: Text(
+                  'Men',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                tileColor: Color(0xFFF5F5F5),
+                dense: false,
+              ),
+              ListTile(
+                title: Text(
+                  'Women',
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                tileColor: Color(0xFFF5F5F5),
+                dense: false,
               ),
             ],
           ),
-        ],
-        centerTitle: true,
-        elevation: 4.0,
+        ),
       ),
+      appBar: responsiveVisibility(
+        context: context,
+        tablet: false,
+        tabletLandscape: false,
+        desktop: false,
+      )
+          ? AppBar(
+              backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+              iconTheme: IconThemeData(
+                  color: FlutterFlowTheme.of(context).primaryText),
+              automaticallyImplyLeading: true,
+              title: Image.asset(
+                'assets/images/Logo_Etc._(17).png',
+                width: 100.0,
+                height: 50.0,
+                fit: BoxFit.contain,
+              ),
+              actions: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30.0,
+                      borderWidth: 1.0,
+                      buttonSize: 60.0,
+                      icon: Icon(
+                        Icons.shopping_cart_outlined,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 30.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30.0,
+                      borderWidth: 1.0,
+                      buttonSize: 60.0,
+                      icon: Icon(
+                        Icons.star_border,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 30.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ],
+                ),
+              ],
+              centerTitle: true,
+              elevation: 4.0,
+            )
+          : null,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -252,8 +267,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   Align(
                                     alignment:
                                         AlignmentDirectional(0.58, -0.61),
-                                    child: Image.network(
-                                      'https://images.vexels.com/content/281968/preview/t-shirts-on-hanger-and-clothes-rack-mockup-aff73a.png',
+                                    child: Image.asset(
+                                      'assets/images/hoodie.jpg',
                                       width: 500.0,
                                       height: 350.0,
                                       fit: BoxFit.cover,
@@ -392,7 +407,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: FlutterFlowTheme.of(context).primaryBackground,
                   ),
                   child: Padding(
                     padding:
@@ -517,7 +532,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 updateCallback: () => setState(() {}),
                                 child: SaleCardWidget(
                                   image:
-                                      'https://dynamic.zacdn.com/TxFtJFFPu2wGoXNLJefOONp7sRs=/fit-in/346x500/filters:quality(95):fill(ffffff)/https://static-ph.zacdn.com/p/mrl-prints-2278-3582352-1.jpg',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/lktfddp2tbyz/tshirt1.jpg',
                                   name: 'I Love Her',
                                   percentOff: '15% OFF',
                                   price: 1500.0,
@@ -528,7 +543,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 updateCallback: () => setState(() {}),
                                 child: SaleCardWidget(
                                   image:
-                                      'https://www.pngitem.com/pimgs/m/472-4721628_transparent-matching-clothes-clipart-beautiful-couple-t-shirts.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/k00pw6empbh8/tshirt2.png',
                                   price: 2500.0,
                                   name: 'Hoodie',
                                   percentOff: '10% OFF',
@@ -550,7 +565,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 updateCallback: () => setState(() {}),
                                 child: SaleCardWidget(
                                   image:
-                                      'https://i.pinimg.com/originals/e9/44/d4/e944d48a7fce8dac81d14d9c7cba4a27.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/xtendly-m6j9dd/assets/w89hd4csf79i/Towel_13.png',
                                   price: 300.0,
                                   name: 'Nike Hoodie',
                                   percentOff: '10% OFF',
@@ -654,7 +669,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   width: double.infinity,
                   height: 400.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFFCECDCD),
+                    color: FlutterFlowTheme.of(context).primaryBackground,
                   ),
                   child: Padding(
                     padding:
@@ -681,52 +696,59 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 ),
                               ),
-                              Expanded(
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    if (responsiveVisibility(
-                                      context: context,
-                                      phone: false,
-                                    ))
-                                      Expanded(
-                                        child: wrapWithModel(
-                                          model: _model.collectionModel1,
-                                          updateCallback: () => setState(() {}),
-                                          child: CollectionWidget(
-                                            title: 'COLLECTION',
+                              if (responsiveVisibility(
+                                context: context,
+                                phone: false,
+                              ))
+                                Expanded(
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                      ))
+                                        Expanded(
+                                          child: wrapWithModel(
+                                            model: _model.collectionModel1,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child: CollectionWidget(
+                                              title: 'COLLECTION',
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    if (responsiveVisibility(
-                                      context: context,
-                                      phone: false,
-                                    ))
-                                      Expanded(
-                                        child: wrapWithModel(
-                                          model: _model.collectionModel2,
-                                          updateCallback: () => setState(() {}),
-                                          child: CollectionWidget(
-                                            title: 'INFORMATION',
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                      ))
+                                        Expanded(
+                                          child: wrapWithModel(
+                                            model: _model.collectionModel2,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child: CollectionWidget(
+                                              title: 'INFORMATION',
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    if (responsiveVisibility(
-                                      context: context,
-                                      phone: false,
-                                    ))
-                                      Expanded(
-                                        child: wrapWithModel(
-                                          model: _model.collectionModel3,
-                                          updateCallback: () => setState(() {}),
-                                          child: CollectionWidget(
-                                            title: 'MORE',
+                                      if (responsiveVisibility(
+                                        context: context,
+                                        phone: false,
+                                      ))
+                                        Expanded(
+                                          child: wrapWithModel(
+                                            model: _model.collectionModel3,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child: CollectionWidget(
+                                              title: 'MORE',
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
                             ],
                           ),
                         ),
