@@ -71,7 +71,7 @@ class _FooterInformationWidgetState extends State<FooterInformationWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 8.0),
               child: Icon(
                 Icons.pin_drop,
-                color: Colors.black,
+                color: FlutterFlowTheme.of(context).primaryText,
                 size: 24.0,
               ),
             ),
@@ -88,7 +88,7 @@ class _FooterInformationWidgetState extends State<FooterInformationWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 8.0),
               child: Icon(
                 Icons.phone_android_outlined,
-                color: Colors.black,
+                color: FlutterFlowTheme.of(context).primaryText,
                 size: 24.0,
               ),
             ),
@@ -105,7 +105,7 @@ class _FooterInformationWidgetState extends State<FooterInformationWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 8.0),
               child: Icon(
                 Icons.mail_outlined,
-                color: Colors.black,
+                color: FlutterFlowTheme.of(context).primaryText,
                 size: 24.0,
               ),
             ),

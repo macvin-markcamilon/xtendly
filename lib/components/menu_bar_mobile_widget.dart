@@ -77,8 +77,8 @@ class _MenuBarMobileWidgetState extends State<MenuBarMobileWidget> {
                   Navigator.pop(context);
                 },
               ),
-              Image.network(
-                widget.image!,
+              Image.asset(
+                'assets/images/Logo_Etc._(17).png',
                 width: 100.0,
                 height: 100.0,
                 fit: BoxFit.contain,
